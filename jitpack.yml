@@ -1,0 +1,8 @@
+jdk:
+  - openjdk17
+
+before_install:
+  - chmod +x gradlew
+
+install:
+  - ./gradlew :idempotent-core:publishToMavenLocal :idempotent-storage-jdbc:publishToMavenLocal :idempotent-spring-boot-starter:publishToMavenLocal -x test
